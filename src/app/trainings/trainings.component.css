@@ -1,0 +1,48 @@
+.trainings-container {
+    padding: 2rem;
+    background-color: var(--mat-app-background-color);
+    color: var(--mat-app-text-color);
+  }
+  
+  .trainings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .trainings-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .trainings-table {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: var(--mat-app-elevation-shadow-level-1);
+  }
+  
+  .trainings-table .mat-header-cell, .trainings-table .mat-cell {
+    padding: 1rem;
+  }
+  
+  .trainings-table .mat-header-row {
+    background-color: #f5f5f5;
+  }
+  
+  .trainings-table .mat-header-cell {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .trainings-table .mat-cell {
+    color: #555;
+  }
+  
+  .add-training-button {
+    background-color: #6200ea;
+    color: white;
+  }
+  

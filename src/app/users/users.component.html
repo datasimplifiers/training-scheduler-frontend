@@ -1,0 +1,64 @@
+<div class="flex flex-col">
+    <mat-form-field>
+      <input matInput [(ngModel)]="userName" placeholder="Full Name" />
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput [(ngModel)]="userEmail" placeholder="Email Address" />
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput [(ngModel)]="userPassword" placeholder="Password" />
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Role</mat-label>
+      <mat-select [(ngModel)]="userRole">
+        <mat-option value="admin">Admin</mat-option>
+        <mat-option value="trainingLead">Training Lead</mat-option>
+        <mat-option value="trainer">Trainer</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Assign Formats</mat-label>
+      <mat-select [(ngModel)]="selectedFormats" multiple>
+        <mat-option *ngFor="let format of formats" [value]="format.id">
+          {{ format.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Assign Categories</mat-label>
+      <mat-select [(ngModel)]="selectedCategories" multiple>
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Assign Topics</mat-label>
+      <mat-select [(ngModel)]="selectedTopics" multiple>
+        <mat-option *ngFor="let topic of topics" [value]="topic.id">
+          {{ topic.name }} ({{ topic.category?.name }})
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="addUser()">Add User</button>
+  </div>
+  
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold">Registered Users</h2>
+    <div *ngFor="let user of users">
+      <mat-card>
+        {{ user.name }} ({{ user.roles }})
+        <button mat-icon-button color="warn" (click)="deleteUser(user.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+  

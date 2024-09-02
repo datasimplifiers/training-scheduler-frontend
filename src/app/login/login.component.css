@@ -1,0 +1,35 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--mat-app-background-color);
+  }
+  
+  .login-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--mat-app-elevation-shadow-level-2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-form h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .login-form .mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .login-form .mat-raised-button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #6200ea;
+    color: white;
+  }
+  

@@ -1,0 +1,35 @@
+.dashboard-container {
+    padding: 2rem;
+    background-color: var(--mat-app-background-color);
+    color: var(--mat-app-text-color);
+  }
+  
+  .dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .dashboard-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--mat-app-elevation-shadow-level-1);
+    text-align: center;
+  }
+  
+  .dashboard-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .dashboard-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .training-list {
+    margin-top: 2rem;
+  }
+  

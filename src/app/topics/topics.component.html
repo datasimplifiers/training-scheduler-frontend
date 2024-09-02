@@ -1,0 +1,28 @@
+<div class="flex flex-col">
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <mat-select [(ngModel)]="selectedCategory">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput [(ngModel)]="topicName" placeholder="Topic Name" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addTopic()">Add</button>
+  </div>
+  
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold">Available Topics</h2>
+    <div *ngFor="let topic of topics">
+      <mat-card>
+        {{ topic.name }} ({{ topic.category?.name }})
+        <button mat-icon-button color="warn" (click)="deleteTopic(topic.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+  

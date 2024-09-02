@@ -1,0 +1,38 @@
+.schedule-training-container {
+    padding: 2rem;
+    background-color: var(--mat-app-background-color);
+    color: var(--mat-app-text-color);
+  }
+  
+  .schedule-training-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .schedule-training-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .schedule-training-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--mat-app-elevation-shadow-level-2);
+  }
+  
+  .schedule-training-form .mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .schedule-training-form .mat-raised-button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #6200ea;
+    color: white;
+  }
+  

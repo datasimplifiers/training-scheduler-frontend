@@ -1,0 +1,13 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <mat-card>Total # of Formats: {{ totalFormats }}</mat-card>
+    <mat-card>Total # of Categories: {{ totalCategories }}</mat-card>
+    <mat-card>Total # of Topics: {{ totalTopics }}</mat-card>
+  </div>
+  
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold">Training Sessions</h2>
+    <div *ngFor="let training of trainings">
+      <mat-card>{{ training.name }} ({{ training.date }})</mat-card>
+    </div>
+  </div>
+  

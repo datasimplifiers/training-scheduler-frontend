@@ -1,0 +1,19 @@
+<div class="flex flex-col">
+    <mat-form-field>
+      <input matInput [(ngModel)]="categoryName" placeholder="Category Name" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addCategory()">Add</button>
+  </div>
+  
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold">Available Categories</h2>
+    <div *ngFor="let category of categories">
+      <mat-card>
+        {{ category.name }}
+        <button mat-icon-button color="warn" (click)="deleteCategory(category.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+  
